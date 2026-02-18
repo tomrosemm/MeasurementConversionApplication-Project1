@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Measurement Conversion Application</string>
     <string name="conversion">Conversion</string>
+    <string name="unit_one">Unit One</string>
+    <string name="unit_two">Unit Two</string>
 
     <string-array name="conversion_options">
         <item>Miles to Kilometers</item>

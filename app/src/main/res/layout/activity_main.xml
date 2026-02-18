@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,12 +9,61 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/conversionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/conversion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/conversionSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/unitOneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/unit_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversionText" />
+
+    <EditText
+        android:id="@+id/unitOneNumber"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/unitOneText"
+        app:layout_constraintStart_toStartOf="@+id/conversionSpinner"
+        app:layout_constraintTop_toTopOf="@+id/unitOneText" />
+
+    <TextView
+        android:id="@+id/unitTwoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/unit_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitOneText" />
+
+    <EditText
+        android:id="@+id/unitTwoNumber"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/unitTwoText"
+        app:layout_constraintStart_toStartOf="@+id/unitOneNumber"
+        app:layout_constraintTop_toTopOf="@+id/unitTwoText" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

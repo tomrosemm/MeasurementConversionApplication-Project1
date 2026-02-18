@@ -9,7 +9,6 @@ import androidx.core.view.WindowInsetsCompat
 
 class activity_tomrosemm : AppCompatActivity() {
 
-    var conversions = arrayOf("Miles to Kilometers", "Kilometers to Miles", "Inches to Centimeters", "Centimeters to Inches")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
