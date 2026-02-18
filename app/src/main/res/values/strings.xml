@@ -3,12 +3,15 @@
     <string name="conversion">Conversion</string>
     <string name="unit_one">Unit One</string>
     <string name="unit_two">Unit Two</string>
+    <string name="_0">0</string>
 
     <string-array name="conversion_options">
         <item>Miles to Kilometers</item>
         <item>Kilometers to Miles</item>
         <item>Inches to Centimeters</item>
         <item>Centimeters to Inches</item>
+        <item>Tablespoons to Cups</item>
+        <item>Cups to Tablespoons</item>
     </string-array>
 
 </resources>
