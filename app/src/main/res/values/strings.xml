@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">MeasurementConversionApplication-Project1</string>
+    <string name="app_name">Measurement Conversion Application</string>
     <string name="conversion">Conversion</string>
+
+    <string-array name="conversion_options">
+        <item>Miles to Kilometers</item>
+        <item>Kilometers to Miles</item>
+        <item>Inches to Centimeters</item>
+        <item>Centimeters to Inches</item>
+    </string-array>
+
 </resources>
