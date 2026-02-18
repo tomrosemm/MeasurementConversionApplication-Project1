@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MeasurementConversionApplication-Project1</string>
+    <string name="conversion">Conversion</string>
 </resources>
