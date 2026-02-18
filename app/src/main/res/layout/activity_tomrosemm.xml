@@ -30,7 +30,7 @@
         tools:layout_editor_absoluteY="57dp" />
 
     <Spinner
-        android:id="@+id/conversioiniiSpinner"
+        android:id="@+id/conversionSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/conversionText"
