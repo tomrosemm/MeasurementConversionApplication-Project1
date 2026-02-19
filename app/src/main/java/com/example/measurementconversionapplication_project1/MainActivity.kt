@@ -41,6 +41,36 @@ class MainActivity : AppCompatActivity() {
                         unitOneTextView.text = getString(R.string.kilometers)
                         unitTwoTextView.text = getString(R.string.miles)
                     }
+
+                    2 -> {
+                        unitOneTextView.text = getString(R.string.inches)
+                        unitTwoTextView.text = getString(R.string.centimeters)
+                    }
+
+                    3 -> {
+                        unitOneTextView.text = getString(R.string.centimeters)
+                        unitTwoTextView.text = getString(R.string.inches)
+                    }
+
+                    4 -> {
+                        unitOneTextView.text = getString(R.string.teaspoons)
+                        unitTwoTextView.text = getString(R.string.cups)
+                    }
+
+                    5 -> {
+                        unitOneTextView.text = getString(R.string.cups)
+                        unitTwoTextView.text = getString(R.string.teaspoons)
+                    }
+
+                    6 -> {
+                        unitOneTextView.text = getString(R.string.ounces)
+                        unitTwoTextView.text = getString(R.string.pounds)
+                    }
+
+                    7 -> {
+                        unitOneTextView.text = getString(R.string.pounds)
+                        unitTwoTextView.text = getString(R.string.ounces)
+                    }
                 }
             }
 
