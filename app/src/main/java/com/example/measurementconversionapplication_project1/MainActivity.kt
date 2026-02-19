@@ -1,8 +1,11 @@
 package com.example.measurementconversionapplication_project1
 
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -13,16 +16,38 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val spinner = findViewById<Spinner>(R.id.conversionSpinner)
+        val unitOneTextView = findViewById<TextView>(R.id.unitOneText)
+        val unitTwoTextView = findViewById<TextView>(R.id.unitTwoText)
 
-        val adapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(
-            this,
-            R.array.conversion_options,
-            android.R.layout.simple_spinner_item
-        )
-
+        val adapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this, R.array.conversion_options, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spinner.adapter = adapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: android.view.View?,
+                position: Int,
+                id: Long
+            ) {
+                when (position) {
+                    0 -> {
+                        unitOneTextView.text = getString(R.string.miles)
+                        unitTwoTextView.text = getString(R.string.kilometers)
+                    }
+
+                    1 -> {
+                        unitOneTextView.text = getString(R.string.kilometers)
+                        unitTwoTextView.text = getString(R.string.miles)
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+
+            }
+        }
 
     }
 }

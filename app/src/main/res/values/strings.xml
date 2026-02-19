@@ -4,6 +4,8 @@
     <string name="unit_one">Unit One</string>
     <string name="unit_two">Unit Two</string>
     <string name="_0">0</string>
+    <string name="miles">Miles</string>
+    <string name="kilometers">Kilometers</string>
 
     <string-array name="conversion_options">
         <item>Miles to Kilometers</item>
