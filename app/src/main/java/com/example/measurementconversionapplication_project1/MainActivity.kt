@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        // Get references to the views in the layout
         val spinner = findViewById<Spinner>(R.id.conversionSpinner)
+
         val unitOneTextView = findViewById<TextView>(R.id.unitOneText)
         val unitTwoTextView = findViewById<TextView>(R.id.unitTwoText)
 
