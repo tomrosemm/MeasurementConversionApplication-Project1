@@ -37,15 +37,11 @@ class MainActivity : AppCompatActivity() {
         // Configure the adapter to the spinner
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
-        
+
+
         fun performConversion() {
 
             val input = unitOneNumber.text.toString().toDoubleOrNull()
-
-            if (input == null) {
-                unitTwoNumber.text = ""
-                return
-            }
 
             // When a spinner option is selected, set text in unitTextViews and calculate result
             val result = when (spinner.selectedItemPosition) {
@@ -54,62 +50,63 @@ class MainActivity : AppCompatActivity() {
                 0 -> { 
                     unitOneTextView.text = getString(R.string.miles)
                     unitTwoTextView.text = getString(R.string.kilometers)
-                    input * 1.6094
+                    input?.times(1.6094)
                 }
 
                 // Kilometers to Miles
                 1 -> { 
                     unitOneTextView.text = getString(R.string.kilometers)
                     unitTwoTextView.text = getString(R.string.miles)
-                    input / 1.6094
+                    input?.div(1.6094)
                 }
 
                 // Inches to Centimeters
                 2 -> { 
                     unitOneTextView.text = getString(R.string.inches)
                     unitTwoTextView.text = getString(R.string.centimeters)
-                    input * 2.54
+                    input?.times(2.54)
                 }
 
                 // Centimeters to Inches
                 3 -> { 
                     unitOneTextView.text = getString(R.string.centimeters)
                     unitTwoTextView.text = getString(R.string.inches)
-                    input / 2.54
+                    input?.div(2.54)
                 }
 
                 // Teaspoons to Cups
                 4 -> { 
                     unitOneTextView.text = getString(R.string.teaspoons)
                     unitTwoTextView.text = getString(R.string.cups)
-                    input / 48
+                    input?.div(48)
                 }
 
                 // Cups to Teaspoons
                 5 -> { 
                     unitOneTextView.text = getString(R.string.cups)
                     unitTwoTextView.text = getString(R.string.teaspoons)
-                    input * 48
+                    input?.times(48)
                 }
 
                 // Ounces to Pounds
                 6 -> { 
                     unitOneTextView.text = getString(R.string.ounces)
                     unitTwoTextView.text = getString(R.string.pounds)
-                    input / 16
+                    input?.div(16)
                 }
 
                 // Pounds to Ounces
                 7 -> { 
                     unitOneTextView.text = getString(R.string.pounds)
                     unitTwoTextView.text = getString(R.string.ounces)
-                    input * 16
+                    input?.times(16)
                 }
 
                 else -> 0.0
             }
 
-            unitTwoNumber.text = String.format("%.4f", result)
+            unitTwoNumber.text =
+                if (result == null) "" else String.format("%.4f", result)
         }
         
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -128,5 +125,6 @@ class MainActivity : AppCompatActivity() {
         unitOneNumber.doAfterTextChanged {
             performConversion()
         }
+        performConversion()
     }
 }
