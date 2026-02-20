@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val unitOneNumber = findViewById<EditText>(R.id.unitOneNumber)
         val unitTwoNumber = findViewById<TextView>(R.id.unitTwoNumber)
 
+        // Create an adapter for the spinner from the string array
         val adapter = ArrayAdapter.createFromResource(
             this,
             R.array.conversion_options,
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 return
             }
 
+            // When a spinner option is selected, set text in unitTextViews and calculate result
             val result = when (spinner.selectedItemPosition) {
 
                 0 -> { 
