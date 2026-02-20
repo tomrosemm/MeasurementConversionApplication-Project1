@@ -18,8 +18,9 @@ class MainActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.conversionSpinner)
         val unitOneTextView = findViewById<TextView>(R.id.unitOneText)
         val unitTwoTextView = findViewById<TextView>(R.id.unitTwoText)
-        val inputValue = findViewById<EditText>(R.id.inputValue)
-        val resultText = findViewById<TextView>(R.id.resultText)
+
+        val unitOneNumber = findViewById<TextView>(R.id.unitOneNumber)
+        val unitTwoNumber = findViewById<TextView>(R.id.unitTwoNumber)
 
         val adapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this, R.array.conversion_options, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 id: Long
             ) {
 
-                val input = inputValue.text.toString().toDoubleOrNull() ?: 0.0
+                val input = unitOneNumber.text.toString().toDoubleOrNull() ?: 0.0
                 var result = 0.0
                 
                 when (position) {
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                resultText.text = String.format("%.4f", result)
+                unitTwoNumber.text = String.format("%.4f", result)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
