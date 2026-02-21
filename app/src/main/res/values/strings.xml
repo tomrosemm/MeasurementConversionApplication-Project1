@@ -12,6 +12,7 @@
     <string name="cups">Cups</string>
     <string name="ounces">Ounces</string>
     <string name="pounds">Pounds</string>
+    <string name="measurement_convertor">Measurement Convertor</string>
 
     <string-array name="conversion_options">
         <item>Miles to Kilometers</item>

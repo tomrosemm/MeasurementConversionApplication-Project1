@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         val unitOneNumber = findViewById<EditText>(R.id.unitOneNumber)
         val unitTwoNumber = findViewById<TextView>(R.id.unitTwoNumber)
 
+        val toolbar = findViewById<com.google.android.material.appbar.MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.title = "Measurement Conversion"
+
         // Create an adapter for the spinner from the string array
         val adapter = ArrayAdapter.createFromResource(
             this,

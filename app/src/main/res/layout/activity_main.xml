@@ -8,6 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/measurement_convertor"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        android:background="@color/ToolbarColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true"
+        app:logo="@drawable/baseline_bar_chart_24"
+        />
+
     <TextView
         android:id="@+id/conversionText"
         android:layout_width="wrap_content"
