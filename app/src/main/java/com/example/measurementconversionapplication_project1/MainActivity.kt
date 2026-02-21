@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
 
-
+    //main conversion spinner logic
         fun performConversion() {
 
             val input = unitOneNumber.text.toString().toDoubleOrNull()
@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
             unitTwoNumber.text =
                 if (result == null) "" else String.format("%.4f", result)
         }
-        
+        //adds logic for real time conversion
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
-        
+        //fixes bug where measurement name isnt specified   
         unitOneNumber.doAfterTextChanged {
             performConversion()
         }
