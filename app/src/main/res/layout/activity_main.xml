@@ -63,13 +63,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/unitOneText" />
 
-    <EditText
+    <TextView
         android:id="@+id/unitTwoNumber"
         android:layout_width="70dp"
         android:layout_height="42dp"
         android:autofillHints="Converted Number"
         android:height="48dp"
-        android:inputType="number"
+        android:textSize="18sp"
         android:hint="@string/_0"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/unitTwoText"
